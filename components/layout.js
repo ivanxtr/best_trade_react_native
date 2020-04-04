@@ -1,46 +1,119 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
-import { GET_ALL_LISTINGS } from '../queries'
-import { Query } from 'react-apollo';
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Button,
+  ImageBackground,
+  FlatList,
+} from 'react-native';
+import {GET_ALL_LISTINGS} from '../queries';
+import {Query} from 'react-apollo';
+import Header from './Header';
+import {DEV_HOST} from 'react-native-dotenv';
 
-const Layout = ({ navigation }) => {
-  const [items, setItems] = useState([
-    { id: 1, text: 'Milk' },
-    { id: 2, text: 'Eggs' },
-    { id: 3, text: 'Bread' },
-    { id: 4, text: 'Juice' }
-  ]);
-
+const Layout = ({navigation}) => {
+  const {
+    ImageBackgroundStyles,
+    containerHome,
+    itemContainer,
+    itemText,
+    propertyType,
+  } = styles;
+  const typesToString = value => {
+    switch (value) {
+      case 'VNT':
+        return 'Venta';
+      case 'RNT':
+        return 'Renta';
+      default:
+        return 'Bodega';
+    }
+  };
   return (
-    <View>
-      <TouchableOpacity>
-         <Text>This is HOME!</Text>
-      </TouchableOpacity>
+    <View style={containerHome}>
+      <Header nav={navigation} />
       <Query query={GET_ALL_LISTINGS}>
-          {
-            ({loading, error, data}) => {
-              if(loading) return <Text> Loading....</Text>
-              if(error) console.log(error);
-              if(data) {
-                const { allListings } = data 
-                return allListings.map((listing, index) => {
-                  return (
-                    <View key={index}>
-                      <Text> {listing.title} </Text>
-                      <Text> { listing.id }</Text>
-                    </View>
-                  )
-                })
-              }
-            }
+        {({loading, error, data}) => {
+          if (loading) {
+            return <Text> Loading....</Text>;
           }
-        </Query>
-        <Button
+          if (error) {
+            console.log(error);
+          }
+          if (data) {
+            return (
+              <FlatList
+                data={data.allListings}
+                renderItem={listing => (
+                  <TouchableOpacity
+                    onPress={() =>
+                      navigation.navigate('Description', {data: listing})
+                    }>
+                    <ImageBackground
+                      source={{
+                        uri: `${DEV_HOST}${listing.item.photoMain}`,
+                      }}
+                      style={ImageBackgroundStyles}>
+                      <View style={itemContainer}>
+                        <Text style={itemText}> {listing.item.title} </Text>
+                        <Text style={propertyType}>
+                          {typesToString(listing.item.transactionType)}
+                        </Text>
+                      </View>
+                    </ImageBackground>
+                  </TouchableOpacity>
+                )}
+                keyExtractor={(item, index) => index.toString()}
+              />
+            );
+          }
+        }}
+      </Query>
+      <Button
         title="Go to Details"
         onPress={() => navigation.navigate('About')}
       />
     </View>
-  )
-}
+  );
+};
 
-export default Layout
+const styles = StyleSheet.create({
+  containerHome: {
+    paddingTop: 91,
+  },
+  ImageBackgroundStyles: {
+    alignSelf: 'stretch',
+    height: 200,
+    borderTopWidth: 5,
+    borderBottomWidth: 5,
+    borderColor: '#767676',
+  },
+  itemContainer: {
+    backgroundColor: 'rgba(0,0,0,0.35)',
+    position: 'relative',
+    top: 133,
+  },
+  itemText: {
+    fontFamily: 'Lato-Black',
+    fontSize: 20,
+    color: 'white',
+    marginLeft: 5,
+    marginTop: 5,
+  },
+  propertyType: {
+    fontFamily: 'Lato-Black',
+    fontSize: 15,
+    color: 'white',
+    backgroundColor: '#ff1d84',
+    padding: 1,
+    width: 55,
+    textAlign: 'center',
+    marginLeft: 8,
+    marginTop: 5,
+    marginBottom: 10,
+  },
+});
+
+export default Layout;

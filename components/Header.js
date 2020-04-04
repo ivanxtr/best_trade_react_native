@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React from 'react';
+import {Text, StyleSheet, View} from 'react-native';
 
-
-const Header = () => {
-  const { headerContainer, imageHeader } = styles;
-  return(
-    <View style={headerContainer}>
-      <Image style={imageHeader} source={{ uri: 'https://reactnative.dev/img/header_logo.svg' }} />
+const Header = ({nav}) => {
+  const {headerContainer, title} = styles;
+  return (
+    <View style={headerContainer} onPress={nav.toggleDrawer}>
+      <Text style={title}> Best Trade </Text>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -17,14 +16,20 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    backgroundColor: '#10284e',
-    overflow: 'hidden',
-    height: 80,
+    backgroundColor: '#fff',
+    height: 90,
+    alignItems: 'center',
+    color: '#fff',
+    borderBottomColor: '#ff1d84',
+    borderBottomWidth: 1,
   },
-  imageHeader: {
-    width: 25,
-    height: 25,
-  }
+  title: {
+    fontFamily: 'Pacifico-Regular',
+    fontSize: 25,
+    position: 'relative',
+    top: 40,
+    color: '#767676',
+  },
 });
 
 export default Header;

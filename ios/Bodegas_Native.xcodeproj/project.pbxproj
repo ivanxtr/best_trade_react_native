@@ -18,6 +18,15 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* Bodegas_NativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Bodegas_NativeTests.m */; };
 		56A9680299B4A4D7C0930018 /* libPods-Bodegas_Native.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F11351D85336E5D8A97D1040 /* libPods-Bodegas_Native.a */; };
+		6242B791243A7AC900F58B01 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6242B790243A7AC900F58B01 /* Lato-Black.ttf */; };
+		626FE216243AD5CC0098AFFD /* Tangerine-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 626FE213243AD5CC0098AFFD /* Tangerine-Regular.ttf */; };
+		626FE217243AD5CC0098AFFD /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 626FE214243AD5CC0098AFFD /* Pacifico-Regular.ttf */; };
+		626FE218243AD5CC0098AFFD /* Tangerine-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 626FE215243AD5CC0098AFFD /* Tangerine-Bold.ttf */; };
+		62B38FCE243AD9FC00BE0992 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62B38FCD243AD9FC00BE0992 /* Lato-Regular.ttf */; };
+		62B38FD0243ADA0600BE0992 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62B38FCF243ADA0600BE0992 /* Lato-Thin.ttf */; };
+		62B38FD2243ADA2800BE0992 /* DancingScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62B38FD1243ADA2800BE0992 /* DancingScript.ttf */; };
+		62B38FD4243ADA3800BE0992 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62B38FD3243ADA3800BE0992 /* Lato-LightItalic.ttf */; };
+		62FEA2C6243A7F0E0068018D /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62FEA2C5243A7F0E0068018D /* Lobster-Regular.ttf */; };
 		679CEFB842BD91717C0FD9EE /* libPods-Bodegas_Native-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A61F8B42656487C283E280 /* libPods-Bodegas_Native-tvOS.a */; };
 		C60DCBCBD55B73F6EE12B307 /* libPods-Bodegas_Native-Bodegas_NativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CACDC71AF9D63857294D092 /* libPods-Bodegas_Native-Bodegas_NativeTests.a */; };
 /* End PBXBuildFile section */
@@ -55,6 +64,15 @@
 		20A61F8B42656487C283E280 /* libPods-Bodegas_Native-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bodegas_Native-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* Bodegas_Native-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bodegas_Native-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Bodegas_Native-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bodegas_Native-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6242B790243A7AC900F58B01 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "../assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		626FE213243AD5CC0098AFFD /* Tangerine-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tangerine-Regular.ttf"; path = "../assets/fonts/Tangerine-Regular.ttf"; sourceTree = "<group>"; };
+		626FE214243AD5CC0098AFFD /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../assets/fonts/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		626FE215243AD5CC0098AFFD /* Tangerine-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tangerine-Bold.ttf"; path = "../assets/fonts/Tangerine-Bold.ttf"; sourceTree = "<group>"; };
+		62B38FCD243AD9FC00BE0992 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		62B38FCF243ADA0600BE0992 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		62B38FD1243ADA2800BE0992 /* DancingScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DancingScript.ttf; path = ../assets/fonts/DancingScript.ttf; sourceTree = "<group>"; };
+		62B38FD3243ADA3800BE0992 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "../assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		62FEA2C5243A7F0E0068018D /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lobster-Regular.ttf"; path = "../assets/fonts/Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		7C8AEF15A30D2C58F276AFCF /* Pods-Bodegas_Native.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bodegas_Native.release.xcconfig"; path = "Target Support Files/Pods-Bodegas_Native/Pods-Bodegas_Native.release.xcconfig"; sourceTree = "<group>"; };
 		7CACDC71AF9D63857294D092 /* libPods-Bodegas_Native-Bodegas_NativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bodegas_Native-Bodegas_NativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		886A68596AB12A2696FD3A8C /* Pods-Bodegas_Native-Bodegas_NativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bodegas_Native-Bodegas_NativeTests.debug.xcconfig"; path = "Target Support Files/Pods-Bodegas_Native-Bodegas_NativeTests/Pods-Bodegas_Native-Bodegas_NativeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +167,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		47E04BE63710401A9643DCC2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62B38FD3243ADA3800BE0992 /* Lato-LightItalic.ttf */,
+				62B38FD1243ADA2800BE0992 /* DancingScript.ttf */,
+				62B38FCF243ADA0600BE0992 /* Lato-Thin.ttf */,
+				62B38FCD243AD9FC00BE0992 /* Lato-Regular.ttf */,
+				626FE214243AD5CC0098AFFD /* Pacifico-Regular.ttf */,
+				626FE215243AD5CC0098AFFD /* Tangerine-Bold.ttf */,
+				626FE213243AD5CC0098AFFD /* Tangerine-Regular.ttf */,
+				6242B790243A7AC900F58B01 /* Lato-Black.ttf */,
+				62FEA2C5243A7F0E0068018D /* Lobster-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		4BF590484A7208ED467F01F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +195,6 @@
 				D3F7C795C65D8B7FF1EA6FED /* Pods-Bodegas_Native-tvOSTests.debug.xcconfig */,
 				C42775797553110FE7848038 /* Pods-Bodegas_Native-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +214,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4BF590484A7208ED467F01F6 /* Pods */,
+				47E04BE63710401A9643DCC2 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -209,6 +243,7 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				4888EE6A0AC1AD208E0B532B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +265,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				B91C119DDD9553DAAC266915 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,7 +374,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B38FD4243ADA3800BE0992 /* Lato-LightItalic.ttf in Resources */,
+				626FE217243AD5CC0098AFFD /* Pacifico-Regular.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				62B38FD2243ADA2800BE0992 /* DancingScript.ttf in Resources */,
+				62FEA2C6243A7F0E0068018D /* Lobster-Regular.ttf in Resources */,
+				626FE216243AD5CC0098AFFD /* Tangerine-Regular.ttf in Resources */,
+				62B38FCE243AD9FC00BE0992 /* Lato-Regular.ttf in Resources */,
+				626FE218243AD5CC0098AFFD /* Tangerine-Bold.ttf in Resources */,
+				6242B791243A7AC900F58B01 /* Lato-Black.ttf in Resources */,
+				62B38FD0243ADA0600BE0992 /* Lato-Thin.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +418,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -433,6 +478,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4888EE6A0AC1AD208E0B532B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bodegas_Native-Bodegas_NativeTests/Pods-Bodegas_Native-Bodegas_NativeTests-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bodegas_Native-Bodegas_NativeTests/Pods-Bodegas_Native-Bodegas_NativeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7DCE41099CB67159D35AC78E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,6 +516,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B91C119DDD9553DAAC266915 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bodegas_Native/Pods-Bodegas_Native-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bodegas_Native/Pods-Bodegas_Native-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BDC6E6AA21F3921974701D6B /* [CP] Check Pods Manifest.lock */ = {

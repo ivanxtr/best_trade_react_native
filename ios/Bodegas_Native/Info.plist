@@ -53,5 +53,17 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lato-Regular.ttf</string>
+		<string>Lato-Thin.ttf</string>
+		<string>Lato-LightItalic.ttf</string>
+		<string>DancingScript.ttf</string>
+		<string>Tangerine-Regular.ttf</string>
+		<string>Tangerine-Bold.ttf</string>
+		<string>Pacifico-Regular.ttf</string>
+		<string>Lobster-Regular.ttf</string>
+		<string>Lato-Black.ttf</string>
+	</array>
 </dict>
 </plist>

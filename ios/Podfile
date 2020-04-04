@@ -54,6 +54,12 @@ target 'Bodegas_Native' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+
+  pod 'RNGoogleSignin', :path => '../node_modules/react-native-google-signin'
+
+
+
+
   target 'Bodegas_NativeTests' do
     inherit! :complete
     # Pods for testing
