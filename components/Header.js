@@ -1,10 +1,26 @@
 import React from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {SvgXml} from 'react-native-svg';
+import arrowBack from '../assets/svgs/solid/angle-left.svg';
 
-const Header = ({nav}) => {
-  const {headerContainer, title} = styles;
+export const Arrow = ({props, nav}) => {
   return (
-    <View style={headerContainer} onPress={nav.toggleDrawer}>
+    <TouchableOpacity onPress={() => nav.navigate('Home')} style={props}>
+      <SvgXml xml={arrowBack} width="35" height="35" fill="#ff1d84" />
+    </TouchableOpacity>
+  );
+};
+
+export const Config = () => {
+  // /assets/svgs/solid/filter.svg
+  return <TouchableOpacity />;
+};
+
+const Header = ({nav, showArrow}) => {
+  const {headerContainer, title, arrow} = styles;
+  return (
+    <View style={headerContainer}>
+      {showArrow ? <Arrow props={arrow} nav={nav} /> : false}
       <Text style={title}> Best Trade </Text>
     </View>
   );
@@ -29,6 +45,13 @@ const styles = StyleSheet.create({
     position: 'relative',
     top: 40,
     color: '#767676',
+  },
+  arrow: {
+    position: 'absolute',
+    top: 48,
+    left: 0,
+    width: 100,
+    height: 30,
   },
 });
 

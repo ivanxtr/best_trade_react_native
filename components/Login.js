@@ -11,6 +11,7 @@ import LoginModal from './LoginModal';
 
 const Login = ({navigation}) => {
   const [modalVisible, setModalVisible] = useState(false);
+  const [expirationDate, setExpirationDate] = useState(false);
 
   const {
     container,
@@ -31,6 +32,7 @@ const Login = ({navigation}) => {
       const storage = await AsyncStorage.getItem('@email');
       const expiration = await AsyncStorage.getItem('@expiration');
       if (storage !== null && now < expiration) {
+        setExpirationDate(true);
         return navigation.navigate('Home');
       }
     };
@@ -52,7 +54,9 @@ const Login = ({navigation}) => {
         <TouchableOpacity
           style={buttonLogIn}
           onPress={() => {
-            setModalVisible(true);
+            expirationDate
+              ? navigation.navigate('Home')
+              : setModalVisible(true);
           }}>
           <Text style={textLogIn}> Iniciar Sesion </Text>
         </TouchableOpacity>

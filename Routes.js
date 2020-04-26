@@ -1,10 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
-
 import {SvgXml} from 'react-native-svg';
 import homeSvg from './assets/svgs/solid/house-user.svg';
-import notificationSvg from './assets/svgs/solid/at.svg';
+import notificationSvg from './assets/svgs/regular/comment-dots.svg';
 import news from './assets/svgs/solid/book-open.svg';
 
 import Login from './components/Login';
@@ -33,7 +32,7 @@ const Routes = () => (
                       fill={color}
                     />
                   );
-                case 'Notifications':
+                case 'Chat':
                   return (
                     <SvgXml
                       xml={notificationSvg}
@@ -63,7 +62,7 @@ const Routes = () => (
           }}>
           <Tab.Screen name="Home" component={Layout} />
           <Tab.Screen name="News" component={Blog} />
-          <Tab.Screen name="Notifications" component={Notifications} />
+          <Tab.Screen name="Chat" component={Notifications} />
         </Tab.Navigator>
       )}
     </Stack.Screen>
