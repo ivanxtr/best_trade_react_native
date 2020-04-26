@@ -8,6 +8,9 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import axios from 'axios';
+import {DEV_HOST_REMOTE} from 'react-native-dotenv';
+import AsyncStorage from '@react-native-community/async-storage';
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -16,7 +19,7 @@ import {
 import xml from '../assets/svgs/solid/times-circle.svg';
 import {SvgXml} from 'react-native-svg';
 
-const LoginModal = ({modalVisible, setModalVisible}) => {
+const LoginModal = ({modalVisible, setModalVisible, navigation}) => {
   GoogleSignin.configure({
     scopes: ['https://www.googleapis.com/auth/drive.readonly'],
     webClientId:
@@ -65,6 +68,35 @@ const LoginModal = ({modalVisible, setModalVisible}) => {
   const [email, onChangeEmail] = useState('');
   const [password, onChangePassword] = useState('');
 
+  const Login = async () => {
+    var bodyFormData = new FormData();
+    bodyFormData.append('username', email);
+    bodyFormData.append('password', password);
+
+    try {
+      const call = await axios({
+        method: 'post',
+        url: DEV_HOST_REMOTE,
+        data: bodyFormData,
+        headers: {'Content-Type': 'multipart/form-data'},
+      });
+      if (call.data.message === 'Authorized') {
+        setModalVisible(!modalVisible);
+        try {
+          const expiration = (new Date().getDate() + 3).toString();
+          await AsyncStorage.setItem('@email', email);
+          await AsyncStorage.setItem('@expiration', expiration);
+          return navigation.navigate('Home');
+        } catch (e) {
+          return e;
+        }
+      }
+    } catch (e) {
+      console.log(e);
+      return e;
+    }
+  };
+
   return (
     <Modal
       animationType="slide"
@@ -106,7 +138,7 @@ const LoginModal = ({modalVisible, setModalVisible}) => {
             <TouchableOpacity
               style={buttonLogIn}
               onPress={() => {
-                setModalVisible(true);
+                Login();
               }}>
               <Text style={textLogIn}> Entrar </Text>
             </TouchableOpacity>

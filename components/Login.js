@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -7,7 +6,7 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-
+import AsyncStorage from '@react-native-community/async-storage';
 import LoginModal from './LoginModal';
 
 const Login = ({navigation}) => {
@@ -25,6 +24,18 @@ const Login = ({navigation}) => {
     slogan,
   } = styles;
   const image = require('../assets/house_2.jpeg');
+
+  useEffect(() => {
+    const value = async () => {
+      const now = new Date().getDate();
+      const storage = await AsyncStorage.getItem('@email');
+      const expiration = await AsyncStorage.getItem('@expiration');
+      if (storage !== null && now < expiration) {
+        return navigation.navigate('Home');
+      }
+    };
+    value();
+  });
 
   return (
     <View style={container}>
@@ -50,6 +61,7 @@ const Login = ({navigation}) => {
       <LoginModal
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
+        navigation={navigation}
       />
     </View>
   );
