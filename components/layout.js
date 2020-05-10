@@ -11,7 +11,7 @@ import {
 import {GET_ALL_LISTINGS} from '../queries';
 import {Query} from 'react-apollo';
 import Header from './Header';
-import {DEV_HOST} from 'react-native-dotenv';
+import {PROD_HOST} from 'react-native-dotenv';
 
 const Layout = ({navigation}) => {
   const {
@@ -20,6 +20,7 @@ const Layout = ({navigation}) => {
     itemContainer,
     itemText,
     propertyType,
+    hide,
   } = styles;
   const typesToString = value => {
     switch (value) {
@@ -48,12 +49,13 @@ const Layout = ({navigation}) => {
                 data={data.allListings}
                 renderItem={listing => (
                   <TouchableOpacity
+                    style={listing.item.isPublished ? '' : hide}
                     onPress={() =>
                       navigation.navigate('Description', {data: listing})
                     }>
                     <ImageBackground
                       source={{
-                        uri: `${DEV_HOST}${listing.item.photoMain}`,
+                        uri: `${PROD_HOST}${listing.item.photoMain}`,
                       }}
                       style={ImageBackgroundStyles}>
                       <View style={itemContainer}>
@@ -113,6 +115,9 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     marginTop: 5,
     marginBottom: 10,
+  },
+  hide: {
+    display: 'none',
   },
 });
 

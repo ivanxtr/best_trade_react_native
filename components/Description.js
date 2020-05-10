@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, ScrollView} from 'react-native';
 import Header from './Header';
-import {DEV_HOST} from 'react-native-dotenv';
+import {PROD_HOST} from 'react-native-dotenv';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 
 const Description = ({route, navigation}) => {
@@ -33,18 +33,16 @@ const Description = ({route, navigation}) => {
 
   const _renderItem = ({item}) => {
       return (
-        <Image style={thumbnails} source={{uri: `${DEV_HOST}${item.src}`}} />
+        <Image style={thumbnails} source={{uri: `${PROD_HOST}${item.src}`}} />
       );
   };
-
-  console.log(item);
 
   return (
     <View style={containerHome} key={item.id}>
       <Header nav={navigation} showArrow={true} />
       <ScrollView>
         <Text style={mainTitle}>{item.title}</Text>
-        <Image style={logo} source={{uri: `${DEV_HOST}${item.photoMain}`}} />
+        <Image style={logo} source={{uri: `${PROD_HOST}${item.photoMain}`}} />
         <Text style={description}>
           {item.description}
         </Text>

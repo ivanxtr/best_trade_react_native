@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 const GET_ALL_LISTINGS = gql`
   query getAllListings {
     allListings {
+      isPublished
       id
       propertyType
       transactionType
