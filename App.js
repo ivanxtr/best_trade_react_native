@@ -9,7 +9,7 @@ import Routes from './Routes.js';
 import {NavigationContainer} from '@react-navigation/native';
 
 const client = new ApolloClient({
-  link: new HttpLink({uri: 'http://best-trade.com.mx/graphql/'}),
+  link: new HttpLink({uri: 'https://best-trade.com.mx/graphql/'}),
   cache: new InMemoryCache(),
 });
 

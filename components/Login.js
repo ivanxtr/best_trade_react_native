@@ -26,7 +26,7 @@ const Login = ({navigation}) => {
   } = styles;
   const image = require('../assets/house_2.jpeg');
 
-  useEffect(() => {
+  /* useEffect(() => {
     const value = async () => {
       const now = new Date().getDate();
       const storage = await AsyncStorage.getItem('@email');
@@ -37,7 +37,7 @@ const Login = ({navigation}) => {
       }
     };
     value();
-  });
+  }); */
 
   return (
     <View style={container}>
@@ -49,16 +49,7 @@ const Login = ({navigation}) => {
         <TouchableOpacity
           style={buttonDisponibilidad}
           onPress={() => navigation.navigate('Home')}>
-          <Text style={text}> Entrar como Invitado </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={buttonLogIn}
-          onPress={() => {
-            expirationDate
-              ? navigation.navigate('Home')
-              : setModalVisible(true);
-          }}>
-          <Text style={textLogIn}> Iniciar Sesion </Text>
+          <Text style={text}> Entrar </Text>
         </TouchableOpacity>
       </View>
       <ImageBackground source={image} style={imageStyle} />
